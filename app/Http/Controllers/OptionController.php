@@ -44,9 +44,9 @@ class OptionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($option_id)
+    public function show($id)
     {
-        $option = Option::get()->where("option_id", $option_id);
+        $option = Option::where("option_id", $id)->get();
 
         return $option;
     }
