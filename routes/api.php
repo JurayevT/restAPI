@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\OptionController;
-use App\Http\Controllers\ProductController;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +24,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get("options", [OptionController::class, 'index']);
 Route::get("options/{id}", [OptionController::class, 'show']);
+
+Route::get("comments", [CommentController::class, 'index']);
+Route::get("comments/{id}", [CommentController::class, 'show']);
