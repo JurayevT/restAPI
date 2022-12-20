@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\OptionController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostmetaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +33,9 @@ Route::get("comments/{id}", [CommentController::class, 'show']);
 
 Route::get("links", [LinkController::class, 'index']);
 Route::get("links/{id}", [LinkController::class, 'show']);
+
+Route::get("postmetas", [PostmetaController::class, 'index']);
+Route::get("postmetas/{id}", [PostmetaController::class, 'show']);
+
+Route::get("posts", [PostController::class, 'index']);
+Route::get("posts/{id}", [PostController::class, 'show']);

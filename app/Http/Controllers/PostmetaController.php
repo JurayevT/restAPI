@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Link;
+use App\Models\Postmeta;
 use Illuminate\Http\Request;
 
-class LinkController extends Controller
+class PostmetaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class LinkController extends Controller
      */
     public function index()
     {
-        return Link::all();
+        return Postmeta::all();
     }
 
     /**
@@ -46,9 +46,9 @@ class LinkController extends Controller
      */
     public function show($id)
     {
-        $link = Link::where("link_id", $id)->get();
+        $postmeta = Postmeta::where("meta_id", $id)->get();
 
-        return $link;
+        return $postmeta;
     }
 
     /**

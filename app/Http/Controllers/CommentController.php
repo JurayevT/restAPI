@@ -48,10 +48,7 @@ class CommentController extends Controller
     {
         $comment = Comment::where("comment_ID", $id)->get();
 
-        if (count($comment) === 0)
-            return "Comment topilmadi";
-        else
-            return $comment;
+        return $comment;
     }
 
     /**
