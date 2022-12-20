@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
+use App\Models\Link;
 use Illuminate\Http\Request;
 
-class CommentController extends Controller
+class LinkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return Comment::all();
+        return Link::all();
     }
 
     /**
@@ -46,12 +46,12 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        $comment = Comment::where("comment_ID", $id)->get();
+        $link = Link::where("link_id", $id)->get();
 
-        if (count($comment) === 0)
-            return "Comment topilmadi";
+        if (count($link) === 0)
+            return "link topilmadi";
         else
-            return $comment;
+            return $link;
     }
 
     /**
