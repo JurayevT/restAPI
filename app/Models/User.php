@@ -17,6 +17,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = "chpn_users";
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
