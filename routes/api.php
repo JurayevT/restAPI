@@ -6,6 +6,10 @@ use App\Http\Controllers\LinkController;
 use App\Http\Controllers\OptionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostmetaController;
+use App\Http\Controllers\TermController;
+use App\Http\Controllers\TermTaxonomyController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsermetaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,3 +43,15 @@ Route::get("postmetas/{id}", [PostmetaController::class, 'show']);
 
 Route::get("posts", [PostController::class, 'index']);
 Route::get("posts/{id}", [PostController::class, 'show']);
+
+Route::get("terms", [TermController::class, 'index']);
+Route::get("terms/{id}", [TermController::class, 'show']);
+
+Route::get("termTaxonomys", [TermTaxonomyController::class, 'index']);
+Route::get("termTaxonomys/{id}", [TermTaxonomyController::class, 'show']);
+
+Route::get("usermetas", [UsermetaController::class, 'index']);
+Route::get("usermetas/{id}", [UsermetaController::class, 'show']);
+
+Route::get("users", [UserController::class, 'index']);
+Route::get("users/{id}", [UserController::class, 'show']);
